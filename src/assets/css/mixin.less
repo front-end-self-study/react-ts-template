@@ -1,0 +1,65 @@
+body {
+  --primary-color: #48bdcd;
+  --font-color-h1: rgba(0, 0, 0, 0.9);
+  --font-color-h2: rgba(0, 0, 0, 0.6);
+  --font-color-p1: rgba(0, 0, 0, 0.4);
+  --font-color-p2: rgba(0, 0, 0, 0.2);
+  --font-color-link: #3687ff;
+  --font-color-reverse: #fff;
+  --color-yellow: #d4f706;
+  --color-blue: #48bdcd;
+  --color-black: #000;
+  --color-red: #ff523a;
+  --color-green: #26b919;
+  --color-bnb: #e8b30b;
+  --line-color: rgba(0, 0, 0, 0.1);
+  --line-color-2: rgba(0, 0, 0, 0.05);
+  --bg: #fff;
+  --bg-page: #fafafa;
+  --bg-2: rgba(255, 255, 255, 0.2);
+  --bg-input: rgba(0, 0, 0, 0.04);
+  --bg-table: rgba(0, 0, 0, 0.025);
+  --bg-light: rgba(0, 0, 0, 0.02);
+  &.dark {
+    --primary-color: #fff;
+  }
+}
+
+@xxs: ~"(max-width:374px)";
+@xs: ~"(max-width:576px)";
+@sm: ~"(max-width: 900px)";
+@md: ~"(max-width: 1320px)";
+@lg: ~"(max-width: 1600px)";
+@llg: ~"(min-width: 1600px)";
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// 文本溢出 一行
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+}
+.wh(@w, @h: @w) {
+  width: @w;
+  height: @h;
+}
